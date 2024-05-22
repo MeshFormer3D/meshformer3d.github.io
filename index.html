@@ -3,11 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-    content="TBD">
-  <meta name="keywords" content="TBD">
+  <meta name="description" content="High-Quality Mesh Generation with
+    3D-Guided Reconstruction Model">
+  <meta name="keywords" content="High-Quality Mesh Generation with
+  3D-Guided Reconstruction Model">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MeshFormer: TBD</title>
+  <title>MeshFormer: High-Quality Mesh Generation with
+    3D-Guided Reconstruction Model</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -31,7 +33,9 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title" style="font-weight: 500;"><b style="font-weight: 1000;">MeshFormer</b>: TBD
+            <h1 class="title is-1 publication-title" style="font-weight: 500;"><b style="font-weight: 1000;">MeshFormer:
+                High-Quality Mesh Generation with
+                3D-Guided Reconstruction Model</b>
             </h1>
             <h2 class="subtitle is-size-4 publication-venue">Anonymous</h2>
           </div>
@@ -40,5 +44,36 @@
     </div>
   </section>
 
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Open-world 3D reconstruction models have recently garnered significant attention. However, without sufficient 3D inductive bias, existing methods typically entail expensive training costs and struggle to extract high-quality 3D meshes. In this work, we introduce MeshFormer, a sparse-view reconstruction model that explicitly leverages 3D native structure, input guidance, and training supervision. Specifically, instead of using a triplane representation, we store features in 3D sparse voxels and combine transformers with 3D convolutions to leverage an explicit 3D structure and the projective bias. In addition to sparse-view RGB input, we require the network to take as input and generate corresponding normal maps. The input normal maps can be predicted by 2D diffusion models, significantly aiding in the guidance and refinement of the geometry's learning. Moreover, by combining Signed Distance Function (SDF) supervision with surface rendering, we directly learn to generate high-quality meshes without the need for complex multi-stage training processes. By incorporating these explicit 3D biases, MeshFormer can be trained efficiently and deliver high-quality textured meshes with fine-grained geometric details. It can also be integrated with 2D diffusion models to enable fast single-image-to-3D and text-to-3D tasks.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img src="./imgs/pipeline.png" />
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website has been anonymized in compliance with NeurIPS 2024 submission guidelines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
