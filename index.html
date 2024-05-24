@@ -47,6 +47,10 @@
   <section class="section">
     <div class="container is-max-desktop">
       <img src="./imgs/teaser.png" />
+      <p>
+        MeshFormer reconstructs high-quality 3D textured meshes with fine-grained, sharp geometric details in a single feed-forward pass of just a few seconds. <b>MeshFormer can be trained using 8 H100 GPUs for just 2 days.</b>
+      </p>
+      <br>
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -55,9 +59,12 @@
             <p>
               Open-world 3D reconstruction models have recently garnered significant attention. However, without sufficient 3D inductive bias, existing methods typically entail expensive training costs and struggle to extract high-quality 3D meshes. In this work, we introduce MeshFormer, a sparse-view reconstruction model that explicitly leverages 3D native structure, input guidance, and training supervision. Specifically, instead of using a triplane representation, we store features in 3D sparse voxels and combine transformers with 3D convolutions to leverage an explicit 3D structure and the projective bias. In addition to sparse-view RGB input, we require the network to take as input and generate corresponding normal maps. The input normal maps can be predicted by 2D diffusion models, significantly aiding in the guidance and refinement of the geometry's learning. Moreover, by combining Signed Distance Function (SDF) supervision with surface rendering, we directly learn to generate high-quality meshes without the need for complex multi-stage training processes. By incorporating these explicit 3D biases, MeshFormer can be trained efficiently and deliver high-quality textured meshes with fine-grained geometric details. It can also be integrated with 2D diffusion models to enable fast single-image-to-3D and text-to-3D tasks.
             </p>
+            <br>
           </div>
         </div>
       </div>
+      <img src="./imgs/comparison.png" />
+      <p> <b>Qualitative Examples of Single Image to 3D (GSO dataset).</b> Both the textured and textureless mesh renderings are shown. Please zoom in to examine details and mesh quality. </p>
     </div>
   </section>
 
