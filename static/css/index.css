@@ -110,6 +110,13 @@ body {
 
 .results-carousel {
   overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.text-block {
+  width: 80%;
+  margin: 0 auto; /* This centers the element horizontally */
 }
 
 .results-carousel .item {
