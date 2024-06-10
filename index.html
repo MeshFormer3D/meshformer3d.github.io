@@ -25,15 +25,13 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
@@ -69,44 +67,42 @@
 
 
   <section class="hero is-light is-small">
-  <div class="hero-body ">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/composite_0.mp4"
-                    type="video/mp4">
-          </video>
+    <div class="hero-body ">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/composite_0.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-chair-tp">
+            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/composite_1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-shiba">
+            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/composite_2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-fullbody">
+            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/composite_3.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/composite_1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/composite_2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/composite_3.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
+        <p class="text-block">
+          MeshFormer reconstructs high-quality 3D textured meshes with fine-grained, sharp geometric details in a single
+          feed-forward pass that takes just a few seconds. <FONT color=orange><b>MeshFormer can be trained using 8 H100
+              GPUs for just 2 days, whereas concurrent works require more than one hundred.</b></FONT>
       </div>
-          <p class="text-block">
-     MeshFormer reconstructs high-quality 3D textured meshes with fine-grained, sharp geometric details in a single feed-forward pass that takes just a few seconds. <FONT color=orange><b>MeshFormer can be trained using 8 H100 GPUs for just 2 days, whereas concurrent works require more than one hundred.</b></FONT>
     </div>
-  </div>
-</section>
+  </section>
 
   <section class="section">
     <div class="container is-max-desktop">
-<!--       <img src="./imgs/teaser.png" /> -->
-<!--       <p>
+      <!--       <img src="./imgs/teaser.png" /> -->
+      <!--       <p>
         MeshFormer reconstructs high-quality 3D textured meshes with fine-grained, sharp geometric details in a single feed-forward pass that takes just a few seconds. <FONT color=orange><b>MeshFormer can be trained using 8 H100 GPUs for just 2 days, whereas concurrent works require more than one hundred.</b></FONT>
       </p> -->
       <br>
@@ -116,21 +112,70 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Open-world 3D reconstruction models have recently garnered significant attention. However, without sufficient 3D inductive bias, existing methods typically entail expensive training costs and struggle to extract high-quality 3D meshes. In this work, we introduce MeshFormer, a sparse-view reconstruction model that explicitly leverages 3D native structure, input guidance, and training supervision. Specifically, instead of using a triplane representation, we store features in 3D sparse voxels and combine transformers with 3D convolutions to leverage an explicit 3D structure and the projective bias. In addition to sparse-view RGB input, we require the network to take as input and generate corresponding normal maps. The input normal maps can be predicted by 2D diffusion models, significantly aiding in the guidance and refinement of the geometry's learning. Moreover, by combining Signed Distance Function (SDF) supervision with surface rendering, we directly learn to generate high-quality meshes without the need for complex multi-stage training processes. By incorporating these explicit 3D biases, MeshFormer can be trained efficiently and deliver high-quality textured meshes with fine-grained geometric details. It can also be integrated with 2D diffusion models to enable fast single-image-to-3D and text-to-3D tasks.
+              Open-world 3D reconstruction models have recently garnered significant attention. However, without
+              sufficient 3D inductive bias, existing methods typically entail expensive training costs and struggle to
+              extract high-quality 3D meshes. In this work, we introduce MeshFormer, a sparse-view reconstruction model
+              that explicitly leverages 3D native structure, input guidance, and training supervision. Specifically,
+              instead of using a triplane representation, we store features in 3D sparse voxels and combine transformers
+              with 3D convolutions to leverage an explicit 3D structure and the projective bias. In addition to
+              sparse-view RGB input, we require the network to take as input and generate corresponding normal maps. The
+              input normal maps can be predicted by 2D diffusion models, significantly aiding in the guidance and
+              refinement of the geometry's learning. Moreover, by combining Signed Distance Function (SDF) supervision
+              with surface rendering, we directly learn to generate high-quality meshes without the need for complex
+              multi-stage training processes. By incorporating these explicit 3D biases, MeshFormer can be trained
+              efficiently and deliver high-quality textured meshes with fine-grained geometric details. It can also be
+              integrated with 2D diffusion models to enable fast single-image-to-3D and text-to-3D tasks.
             </p>
             <br>
           </div>
         </div>
       </div>
       <h2 class="title is-3 has-text-centered">Single Image to 3D</h2>
-      <img src="./imgs/comparison.png" />
-      <p> Qualitative Examples from the GSO dataset. Both the textured and textureless mesh renderings are shown. Please zoom in to examine details and mesh quality. 
+      <!-- <img src="./imgs/comparison.png" /> -->
+      <div class="tabs is-boxed is-centered">
+        <ul>
+          <li class="is-active" data-tab="meshlrm"><a>MeshLRM</a></li>
+          <li data-tab="instantmesh"><a>InstantMesh</a></li>
+          <li data-tab="one2345"><a>One2345++</a></li>
+          <li data-tab="tripoSR"><a>TripoSR</a></li>
+          <li data-tab="crm"><a>CRM</a></li>
+          <li data-tab="lgm"><a>LGM</a></li>
+        </ul>
+      </div>
+    
+      <div class="container">
+        <div id="meshlrm" class="content-tab is-active">
+          <video poster="" id="meshlrm" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/MeshLRM.mp4" type="video/mp4">
+        </div>
+        <div id="instantmesh" class="content-tab">
+          <video poster="" id="instantmesh" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/InstantMesh.mp4" type="video/mp4">
+        </div>
+        <div id="one2345" class="content-tab">
+          <video poster="" id="one2345" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/One2345pp.mp4" type="video/mp4">
+        </div>
+        <div id="tripoSR" class="content-tab">
+          <video poster="" id="tripoSR" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/TripoSR.mp4" type="video/mp4">
+        </div>
+        <div id="crm" class="content-tab">
+          <video poster="" id="crm" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/CRM.mp4" type="video/mp4">
+        </div>
+        <div id="lgm" class="content-tab">
+          <video poster="" id="lgm" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/LGM.mp4" type="video/mp4">
+        </div>
+      </div>
+      <p> Qualitative Examples from the GSO dataset. Both the textured and textureless mesh renderings are shown. Please
+        zoom in to examine details and mesh quality.
       </p>
       <br>
       <br>
       <h2 class="title is-3 has-text-centered">Application: Text to 3D</h2>
       <img src="./imgs/text23d.png" />
-<!--       <p> <b>Application: Text to 3D.</b>  -->
       </p>
     </div>
   </section>
@@ -140,9 +185,6 @@
       <div class="columns is-centered">
         <div class="column is-8">
           <div class="content">
-<!--             <p>
-              This website has been anonymized in compliance with NeurIPS 2024 submission guidelines.
-            </p> -->
           </div>
         </div>
       </div>

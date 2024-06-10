@@ -160,3 +160,11 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.content-tab {
+  display: none;
+}
+
+.content-tab.is-active {
+  display: block;
+}
